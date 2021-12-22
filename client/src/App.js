@@ -1,11 +1,17 @@
 import './App.css';
-import { useState, useEffect} from "react";
+import React, { useState, useEffect} from "react";
 import Axios from "axios";
+
+// Custom imports
+import DefaultLayout from './layouts/Default';
+import PageTitle from './components/common/PageTitle';
+
+
 
 function App() {
   
-  const [password, setPassword] = useState("");
-  const [title, setTitle] = useState("");
+  const [password, ] = useState("");
+  const [title, ] = useState("");
   const [passwordList, setPasswordList] = useState([]);
 
   useEffect(() => {
@@ -33,7 +39,7 @@ function App() {
                 id: val.id, 
                 password: val.password, 
                 title: response.data, 
-                iv: val.iv,
+                iv: val.iv, 
                } 
              : val;
          })
@@ -42,43 +48,11 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="AddingPassword">
-         <input 
-                type="text" 
-                placeholder="Ex. Password@123" 
-                onChange={(event) => {
-                  setPassword(event.target.value);
-                }}
-         />
-         <input 
-                type="text" 
-                placeholder="Ex. Facebook"
-                onChange={(event)=> {
-                  setTitle(event.target.value);
-                }} 
-         />
-         <button onClick={addPassword}>Add Password</button>
-      </div>
-
-      <div className="Passwords">
-          {passwordList.map((val, key) => {
-             return( <div className="password" 
-                          onClick={() => {
-                            decryptPassword({
-                              password: val.password, 
-                              iv: val.iv,
-                              id: val.id,
-                            });
-                        }}
-                        key={key}
-                      > 
-                       <h3> {val.title} </h3> 
-                    </div> 
-                   );
-          })}  
-      </div>
-    </div>
+      <React.Fragment>
+        <DefaultLayout>
+          <PageTitle />
+        </DefaultLayout>
+      </React.Fragment>
   );
 }
 
