@@ -19,7 +19,7 @@ class SidebarMainBottomNav extends React.Component {
   render() {
     
     return (
-        <div className="bg-white border-r border-t border-b px-4 h-14 flex items-center justify-center flex-grow flex-shrink-0 sticky bottom-0 left-0">
+        <div className="bg-white border-r border-t border-b px-4 h-14 flex items-center justify-center flex-shrink-0 sticky bottom-0 left-0">
 
           <button className="truncate text-sm bg-gray-900 text-white tracking-wider font-semibold rounded-md shadow-lg drop-shadow-lg p-2 hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
               Remember Password

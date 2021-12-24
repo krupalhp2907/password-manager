@@ -4,7 +4,7 @@ import {SearchIcon} from '@heroicons/react/outline';
 function NavbarSearch({}) {
     
     return (
-        <div className="hidden md:block">
+        <div className="hidden md:block w-full mr-4">
             <div className='flex items-center justify-start flex-1 flex-shrink-0 text-sm text-gray-500'>
                 <button className='mr-2 '>
                     <SearchIcon className='w-4 h-4'/>

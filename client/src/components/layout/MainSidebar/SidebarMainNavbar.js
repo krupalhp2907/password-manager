@@ -20,7 +20,7 @@ class SidebarMainNavbar extends React.Component {
   render() {
     const { hideLogoText } = this.props;
     return (
-        <div className="bg-white border-r border-b px-4 h-14 flex flex-grow flex-shrink-0 items-center justify-between sticky top-0 left-0">
+        <div className="bg-white border-r border-b px-4 h-14 flex flex-shrink-0 items-center justify-between sticky top-0 left-0">
 
           <h1 className="text-lg">
               <a href='#' className='flex items-center justify-between space-x-2'>

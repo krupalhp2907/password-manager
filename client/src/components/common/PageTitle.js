@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {GlobeAltIcon, SearchIcon, PencilIcon, TrashIcon} from '@heroicons/react/outline';
+import {GlobeAltIcon, PencilIcon, TrashIcon} from '@heroicons/react/outline';
 
 function PageTitle({title, noButtons}) {
     return (
-        <div className='border-b pt-3 pb-4 flex flex-col-reverse md:flex-row'>
+        <div className='border-b border-gray-300 pt-3 pb-4 flex flex-col-reverse md:flex-row'>
             <div className="flex flex-grow items-center space-x-2">
-                <GlobeAltIcon className='h-6 w-6 text-gray-500 text-center'/>
+                <GlobeAltIcon className='h-8 w-8 text-gray-500 text-center'/>
                 <a href="#" className='text-2xl text-black font-semibold text-center' target='#'>{title}</a>
             </div>
             
@@ -18,7 +18,7 @@ function PageTitle({title, noButtons}) {
                         <PencilIcon className='h-5 w-5'/>
                         <span className=''>Edit</span>
                     </button>
-                    <button className='flex space-x-2 md:mb-auto items-center font-semibold hover:bg-gray-200 text-sm tracking-wider text-black rounded-md p-2 focus:outline-none focus:bg-gray-200'>
+                    <button className='text-red-600 flex space-x-2 md:mb-auto items-center font-semibold hover:bg-gray-200 text-sm tracking-wider rounded-md p-2 focus:outline-none focus:bg-gray-200'>
                         <TrashIcon className='h-5 w-5'/>
                         <span className=''>Delete </span>
 

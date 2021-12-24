@@ -5,6 +5,10 @@ import Axios from "axios";
 // Custom imports
 import DefaultLayout from './layouts/Default';
 import PageTitle from './components/common/PageTitle';
+import PageContent from './components/common/PageContent';
+
+import {Store, Dispatcher, Constants} from './flux/';
+import './main/pass-store';
 
 
 
@@ -15,9 +19,9 @@ function App() {
   const [passwordList, setPasswordList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/showpasswords").then((response) => {
-      setPasswordList(response.data);
-    });
+    setTimeout(() => {
+      alert("Hello")
+    }, 1000);
   }, []);
 
   const addPassword = () => {
@@ -51,6 +55,7 @@ function App() {
       <React.Fragment>
         <DefaultLayout>
           <PageTitle />
+          <PageContent />
         </DefaultLayout>
       </React.Fragment>
   );

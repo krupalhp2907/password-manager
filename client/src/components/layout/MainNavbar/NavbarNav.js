@@ -21,7 +21,7 @@ function NavbarNav({}) {
                 Signin to sync
             </button>
 
-            <div className='flex items-center justify-between '>
+            <div className='flex items-center justify-between space-x-2 md:space-x-0'>
             <button className='md:hidden w-full bg-white font-medium hover:bg-gray-200 text-sm tracking-wider text-gray-700 rounded-md p-2 focus:outline-none focus:bg-gray-200'>
                 <SearchIcon className='h-6 w-6'/>
             </button>
